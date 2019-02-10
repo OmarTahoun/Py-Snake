@@ -28,6 +28,7 @@ while True:
     key = key if next_key == -1 else next_key
 
     if snake[0][0] in [0, screen_height] or snake[0][1] in [0, screen_width] or snake[0] in snake[1:] :
+        curses.curs_set(1)
         curses.endwin()
         quit()
     new_head = [snake[0][0], snake[0][1]]
